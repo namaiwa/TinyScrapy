@@ -8,6 +8,7 @@ import types
 class Engine(object):
     def __init__(self):
         self._close = None
+        # 异步爬取时的最大并发数
         self.max = 5
         self.scheduler = Scheduler()
         self.crawling_no = 0

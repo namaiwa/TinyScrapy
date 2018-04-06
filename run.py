@@ -17,9 +17,10 @@ class CrawlerProcess(object):
         self.crawlers = self.engine.crawl_request()
         self.active.add(self._close)
         self.active.add(self.crawlers)
+        # 添加事件循环
         a = defer.DeferredList(self.active)
         a.addBoth(lambda _: reactor.stop())
-
+        # 开始事件循环
         reactor.run()
 
 
