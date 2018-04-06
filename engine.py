@@ -39,7 +39,7 @@ class Engine(object):
                 resp.addCallback(self.crawl_request)
                 yield
 
-    # 回调函数，生成Response对象,调用parse处理esponse
+    # 回调函数，生成Response对象,调用parse处理Response
     def response_callback(self, content, request):
         self.crawling_no -= 1
         response = Response(content, request)

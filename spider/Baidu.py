@@ -2,7 +2,7 @@ from TinyScrapy.tinyscrapy import Request
 
 class BaiduSpider():
     name = "zhihu"
-    start_url = ['http://www.baidu.com', 'http://www.bing.com']
+    start_url = ['http://www.bing.com']
 
     def start_requests(self):
         for url in self.start_url:
